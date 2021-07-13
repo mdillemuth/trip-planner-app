@@ -53,8 +53,25 @@ app.get('/trips', (req, res) => {
 
 // Expense POST Endpoint
 app.post('/expense', (req, res) => {
-  /* */
+  expenses.insertOne(
+    {
+      trip: req.body.trip,
+      date: req.body.date,
+      amount: req.body.amount,
+      category: req.body.category,
+      description: req.body.description,
+    },
+    (err, result) => {
+      if (err) {
+        console.error(err)
+        res.status(500).json({ err: err })
+        return
+      }
+      res.status(200).json({ ok: true })
+    }
+  )
 })
+
 // Expense GET Endpoint
 app.get('/expenses', (req, res) => {
   /* */
