@@ -25,16 +25,29 @@ mongo.connect(
 )
 
 // API Endpoints
+
+// Trip POST Endpoint
 app.post('/trip', (req, res) => {
-  /* */
+  const name = req.body.name
+  trips.insertOne({ name: name }, (err, result) => {
+    if (err) {
+      console.error(err)
+      res.status(500).json({ err: err })
+      return
+    }
+    res.status(200).json({ ok: true })
+  })
 })
 
+// Trip GET Endpoint
 app.get('/trips', (req, res) => {
   /* */
 })
+// Expense POST Endpoint
 app.post('/expense', (req, res) => {
   /* */
 })
+// Expense GET Endpoint
 app.get('/expenses', (req, res) => {
   /* */
 })
