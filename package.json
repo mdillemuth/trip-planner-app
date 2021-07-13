@@ -1,0 +1,24 @@
+{
+  "name": "trip-planner-backend",
+  "version": "1.0.0",
+  "description": "REST API using Node.js, Express, and MongoDB to serve the backend for a trip cost calculator app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdillemuth/trip-planner-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mdillemuth/trip-planner-backend/issues"
+  },
+  "homepage": "https://github.com/mdillemuth/trip-planner-backend#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^3.6.10"
+  }
+}
